@@ -14,13 +14,18 @@ export default class Punconvert extends Plugin {
 				const correction:Map = {
 					",":"，",
 					"?":"？",
+					"!":"！",
 					":":"：",
 					";":"；",
+					"(":"（",
+					")":"）",
+					"\"":"＂",
 					"~":"～",
 					".":"．",
+					"...":"…",
 				}
 				let selectedText = editor.getSelection();
-				selectedText = selectedText.replace(/,|\?|:|;|~|\./g, (match) => correction[match]);
+				selectedText = selectedText.replace(/,|\?|!|:|;|\(|\)|"|~|((\.)\2{2,})|(?<=\D)(\.)/gm, match => correction[match]);
 				editor.replaceSelection(selectedText); 
 
 				new Notice("Balala Bao~");
