@@ -11,6 +11,8 @@ export default class Punconvert extends Plugin {
 			id: "Convert",
 			name: "Half to full width",
 			editorCallback: (editor, view)=>{	
+
+				// Matching puncuation
 				const correction:Map = {
 					",":"，",
 					"?":"？",
@@ -25,7 +27,10 @@ export default class Punconvert extends Plugin {
 					"...":"…",
 				}
 				let selectedText = editor.getSelection();
+
+				// Regex search
 				selectedText = selectedText.replace(/,|\?|!|:|;|\(|\)|"|~|((\.)\2{2,})|(?<=\D)(\.)/gm, match => correction[match]);
+				
 				editor.replaceSelection(selectedText); 
 
 				new Notice("Balala Bao~");

@@ -3,9 +3,8 @@
 	"name": "Punctuation Converter",
 	"version": "1.0.0",
 	"minAppVersion": "0.15.0",
-	"description": "This is a sample plugin for Obsidian. This plugin demonstrates some of the capabilities of the Obsidian API.",
-	"author": "JingBao",
-	"authorUrl": "https://obsidian.md",
-	"fundingUrl": "https://obsidian.md/pricing",
+	"description": "This is a simple plugin for converting most used punctuation from halfwidth to fullwidth.",
+	"author": "Jing Hu",
+	"authorUrl": "https://github.com/hc-jinghu",
 	"isDesktopOnly": false
 }
